@@ -1,0 +1,266 @@
+/* Import Google Fonts for Poppins font family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Custom CSS Variables */
+:root {
+  --lightGreen-1: #c0ffa2; /* Custom light green background color variable */
+}
+
+/* Body Styles */
+body {
+  font-weight: 400; /* Normal font weight */
+  font-size: 1.2rem; /* Base font size */
+  line-height: 1.8; /* Line height */
+  font-family: 'Arial', sans-serif; /* Fallback font family */
+  background-color: var(--lightGreen-1); 
+}
+
+/* Link Styles */
+a {
+  text-decoration: none; /* Remove text decoration for links */
+  color: #3498db; /* Blue link color */
+}
+
+/* Button Styles */
+.btn {
+  cursor: pointer; 
+  outline: 0; /* Remove button outline */
+  font-size: 1.1rem; 
+  background-color: #e74c3c; 
+  color: #fff; 
+  padding: 10px 20px; 
+  border-radius: 5px; /* Rounded button corners */
+}
+
+/* Text Styles */
+.text {
+  opacity: 0.7; /* Reduced text opacity */
+}
+
+/* Title Styles */
+.title {
+  font-size: 2.5rem; 
+  margin-bottom: 1.5rem; /* Margin below title */
+  color: #e67e22; 
+}
+
+/* Container Styles */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Meal Wrapper (Body) */
+.meal-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f7dc6f; /* Light yellow background color */
+}
+
+/* Meal Search Styles */
+.meal-search {
+  margin: 2rem 0;
+}
+
+/* Citation Styles in Meal Search */
+.meal-search cite {
+  font-size: 1.2rem; /* Font size for search citation */
+}
+
+/* Meal Search Box Styles */
+.meal-search-box {
+  margin: 1.5rem 0; /* Margin for search box */
+  display: flex;
+  align-items: center;
+}
+
+/* Meal Result Styles */
+.meal-result {
+  margin-top: 3rem; /* Margin above meal results */
+}
+
+/* Meal Item Styles */
+.meal-item {
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 2rem 0;
+  background-color: #3498db; /* Blue background color for meal items */
+  position: relative;
+  text-align: center;
+}
+
+/* Image Styles within Meal Items */
+.meal-item img {
+  max-width: 100%; /* Images fit the container width */
+}
+
+/* Meal Name Styles */
+.meal-name {
+  padding: 1rem 0.5rem;
+}
+
+/* Meal Name Heading Styles */
+.meal-name h3 {
+  font-size: 1.8rem; /* Font size for meal names */
+  color: #e67e22; /* Orange color for meal names */
+}
+
+/* Meal Details Popup Styles */
+.meal-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f5fcf4; /* Light green background color for meal details */
+  border-radius: 1rem;
+  width: 90%;
+  height: 90%;
+  overflow-y: scroll;
+  display: none;
+  padding: 2rem;
+}
+
+/* Scrollbar Styles for Meal Details */
+.meal-details::-webkit-scrollbar {
+  width: 10px;
+}
+
+.meal-details::-webkit-scrollbar-thumb {
+  background: var(--lightGreen-1); /* Scrollbar thumb color using the custom variable */
+  border-radius: 2rem;
+}
+
+/* Display Recipe Styles */
+.show-recipe {
+  display: block;
+}
+
+/* Meal Details Content Styles */
+.meal-details-content {
+  margin: 2rem;
+}
+
+/* Styling for Paragraphs in Meal Details Content */
+.meal-details-content p:not(.recipe-category) {
+  padding: 1rem 0;
+}
+
+/* Close Button Styles for Recipe */
+.recipe-close-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-size: 1.8rem;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+/* Recipe Title Styles */
+.recipe-title {
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/* Recipe Category Styles */
+.recipe-category {
+  background: #fff;
+  font-weight: 600;
+  color: #d65108; /* Orange color for recipe category */
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+}
+
+/* Recipe Instruction Styles */
+.recipe-instruct {
+  padding: 1rem 0;
+}
+
+/* Paragraph Styles */
+.para {
+  text-align: justify;
+}
+
+/* Recipe Link Styles */
+.recipe-link {
+  margin: 1.4rem 0;
+}
+
+/* Hover Styles for Recipe Links */
+.recipe-link a:hover {
+  opacity: 0.8;
+}
+
+/* Not Found Styles */
+.notFound {
+  grid-template-columns: 1fr!important;
+  color: #b54507; /* Dark orange color for not found message */
+  font-size: 1.8rem; /* Font size for not found message */
+  font-weight: 600; /* Bold font weight */
+  width: 100%;
+}
+
+/* Popup Display Styles */
+.popupAdd, .popupRem {
+  visibility: hidden;
+  position: relative;
+}
+
+/* Open Popup Styles */
+.open-popup {
+  visibility: visible;
+  top: 0;
+}
+
+/* Media Query for Screen Width 600px and above */
+@media screen and (min-width: 600px) {
+  .meal-search-box {
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Media Query for Screen Width 768px and above */
+@media screen and (min-width: 768px) {
+  #meal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .meal-item {
+    margin: 0;
+  }
+  .meal-details {
+    width: 1000px;
+  }
+}
+
+/* Media Query for Screen Width 992px and above */
+@media screen and (min-width: 992px) {
+  #meal {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
